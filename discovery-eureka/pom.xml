@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>microservice-discovery-eureka</artifactId>
+    <artifactId>discovery-eureka</artifactId>
 
     <dependencies>
         <dependency>

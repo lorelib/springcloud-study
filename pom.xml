@@ -9,7 +9,8 @@
     <packaging>pom</packaging>
     <version>1.0</version>
     <modules>
-        <module>microservice-discovery-eureka</module>
+        <module>discovery-eureka</module>
+        <module>provider-user</module>
     </modules>
 
     <parent>
