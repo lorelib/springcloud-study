@@ -8,9 +8,11 @@
     <artifactId>springcloud-study</artifactId>
     <packaging>pom</packaging>
     <version>1.0</version>
+
     <modules>
         <module>discovery-eureka</module>
         <module>provider-user</module>
+        <module>consumer-movie-ribbon</module>
     </modules>
 
     <parent>
