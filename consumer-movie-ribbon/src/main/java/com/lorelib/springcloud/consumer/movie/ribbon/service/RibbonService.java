@@ -14,6 +14,6 @@ public class RibbonService {
     private RestTemplate restTemplate;
 
     public User findById(Long id) {
-        return restTemplate.getForObject("http://provider-user/" + id, User.class);
+        return restTemplate.getForObject("http://provider-user/user/" + id, User.class);
     }
 }
