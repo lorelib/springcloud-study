@@ -13,6 +13,8 @@
         <module>discovery-eureka</module>
         <module>provider-user</module>
         <module>consumer-movie-ribbon</module>
+        <module>consumer-movie-feign</module>
+        <module>consumer-movie-ribbon-hystrix</module>
     </modules>
 
     <parent>
