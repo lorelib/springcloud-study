@@ -24,6 +24,23 @@
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.4.0.RELEASE</version>
     </parent>
+    <repositories>
+        <repository>
+            <id>alimaven</id>
+            <name>aliyun maven</name>
+            <url>http://maven.aliyun.com/nexus/content/repositories/central/</url>
+        </repository>
+        <repository>
+            <id>alimaven2</id>
+            <name>aliyun maven2</name>
+            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+        </repository>
+        <repository>
+            <id>repo2</id>
+            <name>Human Readable Name for this Mirror.</name>
+            <url>http://repo2.maven.org/maven2/</url>
+        </repository>
+    </repositories>
     <dependencyManagement>
         <dependencies>
             <dependency>
