@@ -23,19 +23,32 @@
 
     java -jar consumer-movie-ribbon-1.0.jar
     访问： http://localhost:8010/ribbon/1
+    
 > feign
 
     java -jar consumer-movie-feign-1.0.jar
     访问： http://localhost:8020/feign/1
+    
 > ribbon-hystrix
 
     java -jar consumer-movie-ribbon-hystrix-1.0.jar
     访问： http://localhost:8030/ribbon_hystrix/1
     访问监控数据：http://localhost:8030/hystrix.stream
     
-## 启动hystrix-dashboard监控
+## 启动监控
+> hystrix-dashboard
+
     java -jar hystrix-dashboard-1.0.jar
     访问：http://localhost:8040/hystrix.stream
+    在地址栏输入：http://localhost:8030/hystrix.stream
+    
+> turbine
+
+    需要启动hystrix-dashboard
+    java -jar hystrix-turbine-1.0.jar
+    访问：http://localhost:8040/hystrix.stream
+    在地址栏输入：http://localhost:8031/turbine.stream
+    
 
 
 ***注：springcloud应用启动相当耗内存，单个应用可以达到700MB以上，实在太消耗内存***
