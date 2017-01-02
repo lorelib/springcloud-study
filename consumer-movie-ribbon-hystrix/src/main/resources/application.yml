@@ -8,6 +8,6 @@ eureka:
     serviceUrl:
       defaultZone: http://discovery:8761/eureka/
       #defaultZone: http://discovery2:8762/eureka/, http://discovery1:8761/eureka/
-    instance:
-      hostname: ribbon  # 此处，preferIpAddress不设置或者设为false，不能设为true，否则影响turbine的测试。
+  instance:
+    hostname: ribbon  # 此处，preferIpAddress不设置或者设为false，不能设为true，否则影响turbine的测试。
                         # turbine存在的问题：eureka.instance.hostname一致时只能检测到一个节点，会造成turbine数据不完整
