@@ -27,27 +27,27 @@
 > feign
 
     java -jar consumer-movie-feign-1.0.jar
-    访问： http://localhost:8020/feign/1
+    访问： http://localhost:8011/feign/1
     
 > ribbon-hystrix
 
     java -jar consumer-movie-ribbon-hystrix-1.0.jar
-    访问： http://localhost:8030/ribbon_hystrix/1
-    访问监控数据：http://localhost:8030/hystrix.stream
+    访问： http://localhost:8012/ribbon_hystrix/1
+    访问监控数据：http://localhost:8012/hystrix.stream
     
 ## 启动监控
 > hystrix-dashboard
 
     java -jar hystrix-dashboard-1.0.jar
-    访问：http://localhost:8040/hystrix.stream
-    在地址栏输入：http://localhost:8030/hystrix.stream
+    访问：http://localhost:8020/hystrix.stream
+    在地址栏输入：http://localhost:8012/hystrix.stream
     
 > turbine
 
     需要启动hystrix-dashboard
     java -jar hystrix-turbine-1.0.jar
-    访问：http://localhost:8040/hystrix.stream
-    在地址栏输入：http://localhost:8031/turbine.stream
+    访问：http://localhost:8020/hystrix.stream
+    在地址栏输入：http://localhost:8021/turbine.stream
     
 ## 配置中心
 > 获取git上的资源信息遵循如下规则：
@@ -61,13 +61,13 @@
 > config-server
 
     访问：
-    http://localhost:8050/config-client-dev.properties
-    http://localhost:8050/config-client/dev
+    http://localhost:8030/config-client-dev.properties
+    http://localhost:8030/config-client/dev
     
 > config-client
 
     访问：
-    http://localhost:8051/hello
+    http://localhost:8031/hello
     
 
 

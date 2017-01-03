@@ -2,7 +2,7 @@ spring:
   application:
     name: hystrix-turbine
 server:
-  port: 8031
+  port: 8021
 security:
   basic:
     enabled: false
