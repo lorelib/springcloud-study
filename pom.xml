@@ -17,6 +17,8 @@
         <module>consumer-movie-ribbon-hystrix</module>
         <module>hystrix-dashboard</module>
         <module>hystrix-turbine</module>
+        <module>config-server</module>
+        <module>config-client</module>
     </modules>
 
     <parent>

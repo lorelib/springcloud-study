@@ -49,6 +49,26 @@
     访问：http://localhost:8040/hystrix.stream
     在地址栏输入：http://localhost:8031/turbine.stream
     
+## 配置中心
+> 获取git上的资源信息遵循如下规则：
+
+    /{application}/{profile}[/{label}]
+    /{application}-{profile}.yml
+    /{label}/{application}-{profile}.yml
+    /{application}-{profile}.properties
+    /{label}/{application}-{profile}.properties
+    
+> config-server
+
+    访问：
+    http://localhost:8050/config-client-dev.properties
+    http://localhost:8050/config-client/dev
+    
+> config-client
+
+    访问：
+    http://localhost:8051/hello
+    
 
 
 ***注：springcloud应用启动相当耗内存，单个应用可以达到700MB以上，实在太消耗内存***
