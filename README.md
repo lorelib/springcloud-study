@@ -78,9 +78,29 @@
 > config-client-eureka
 
     http://localhost:8033/hello
+    
+## API GATEWAY
+1. 启动discovery-eureka
+2. 启动provider-user
+3. 启动api-gateway
+
+
+    之前通过http://localhost:8000/user/1访问服务，
+    现在通过http://localhost:8040/provider-user/user/1即可访问相应服务
+
+    如果要修改访问路径为http://localhost:8040/test/user/1
+    zuul:
+      routes:
+        user: # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
+          path: /test/**
+          service-id: provider-user
+          
+    如果需要忽略某些服务，可以通过如下配置：
+    zuul:
+      ignored-services: provider-user  #忽略服务
+
 
 ***注意：当服务发现是 Eureka 及 Consul 时，Config Server支持与之联合使用；如果是 Zookeeper 做服务发现，目前不支持与之联合使用。***
-   
     
 ***bootstrap.yml 文件中的内容不能放到 application.yml 中，否则config部分无法被加载，
 因config部分的配置先于 application.yml 被加载，而 bootstrap.yml 中的配置会先于 application.yml 加载***
