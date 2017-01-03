@@ -85,4 +85,4 @@
 ***bootstrap.yml 文件中的内容不能放到 application.yml 中，否则config部分无法被加载，
 因config部分的配置先于 application.yml 被加载，而 bootstrap.yml 中的配置会先于 application.yml 加载***
 
-***注：springcloud应用启动相当耗内存，单个应用可以达到700MB以上，实在太消耗内存***
+
