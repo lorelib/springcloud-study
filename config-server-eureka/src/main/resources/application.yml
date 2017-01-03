@@ -1,0 +1,16 @@
+server:
+  port: 8032
+spring:
+  application:
+    name: config-server-eureka
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          searchLocations: classpath:/config
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka/

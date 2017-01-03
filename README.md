@@ -69,6 +69,20 @@
     访问：
     http://localhost:8031/hello
     
+> config-server-eureka
 
+    访问：
+    http://localhost:8032/config-client-eureka-dev.properties
+    http://localhost:8032/config-client-eureka/dev
+    
+> config-client-eureka
+
+    http://localhost:8033/hello
+
+***注意：当服务发现是 Eureka 及 Consul 时，Config Server支持与之联合使用；如果是 Zookeeper 做服务发现，目前不支持与之联合使用。***
+   
+    
+***bootstrap.yml 文件中的内容不能放到 application.yml 中，否则config部分无法被加载，
+因config部分的配置先于 application.yml 被加载，而 bootstrap.yml 中的配置会先于 application.yml 加载***
 
 ***注：springcloud应用启动相当耗内存，单个应用可以达到700MB以上，实在太消耗内存***
