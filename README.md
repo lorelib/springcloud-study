@@ -6,11 +6,19 @@
     添加：127.0.0.1	discovery discovery1 discovery2 config-server gateway movie user feign ribbon
 
 ## 启动discovery-eureka应用
+> 单机
+
+    java -jar discovery-eureka-1.0.jar
+    访问：
+        http://discovery:8761
+
+> 高可用
+
     java -jar discovery-eureka-1.0.jar --spring.profiles.active=discovery1
     java -jar discovery-eureka-1.0.jar --spring.profiles.active=discovery2
     访问：
         http://discovery1:8761   
-        http://discovery1:8762
+        http://discovery2:8762
 
 ## 启动provider-user服务提供者
     java -jar provider-user-1.0.jar
