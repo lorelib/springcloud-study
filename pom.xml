@@ -24,6 +24,15 @@
         <module>api-gateway</module>
     </modules>
 
+    <developers>
+        <developer>
+            <name>listening</name>
+            <email>893979653@qq.com</email>
+            <url>暂无</url>
+            <roles></roles>
+        </developer>
+    </developers>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
