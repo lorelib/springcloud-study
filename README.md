@@ -3,21 +3,36 @@
 ## hosts配置
 ### windows
     修改C:\Windows\System32\drivers\etc\hosts配置，
-    添加：127.0.0.1	discovery discovery1 discovery2 config-server gateway movie user feign ribbon
+    添加：127.0.0.1 discovery discovery2 config-server gateway movie user feign ribbon
+    
+主机规划：
+项目名称	端口	描述	URL
+microservice-api-gateway	8050	API Gateway	详见文章
+microservice-config-client	8041	配置服务的客户端	详见文章
+microservice-config-server	8040	配置服务	详见文章
+microservice-consumer-movie-feign	8020	Feign Demo	/feign/1
+microservice-consumer-movie-feign-with-hystrix	8021	Feign Hystrix Demo	/feign/1
+microservice-consumer-movie-feign-with-hystrix-stream	8022	Hystrix Dashboard Demo	/feign/1
+microservice-consumer-movie-ribbon	8010	Ribbon Demo	/ribbon/1
+microservice-consumer-movie-ribbon-with-hystrix	8011	Ribbon Hystrix Demo	/ribbon/1
+microservice-discovery-eureka	8761	注册中心	/
+microservice-hystrix-dashboard	8030	hystrix监控	/hystrix.stream
+microservice-hystrix-turbine	8031	turbine	/turbine.stream
+microservice-provider-user	8000	服务提供者	/1    
 
-## 启动discovery-eureka应用
+## 启动microservice-discovery应用
 > 单机
 
-    java -jar discovery-eureka-1.0.jar
+    java -jar microservice-discovery-1.0.jar
     访问：
         http://discovery:8761
 
 > 高可用
 
-    java -jar discovery-eureka-1.0.jar --spring.profiles.active=discovery1
-    java -jar discovery-eureka-1.0.jar --spring.profiles.active=discovery2
+    java -jar microservice-discovery-1.0.jar --spring.profiles.active=discovery
+    java -jar microservice-discovery-1.0.jar --spring.profiles.active=discovery2
     访问：
-        http://discovery1:8761   
+        http://discovery:8761   
         http://discovery2:8762
 
 ## 启动provider-user服务提供者
