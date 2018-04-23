@@ -1,11 +1,13 @@
 package com.lorelib.springcloud.movie.feign.controller;
 
-import com.lorelib.springcloud.movie.feign.clients.UserFeignClient;
+import com.lorelib.springcloud.movie.feign.feign.UserFeignClient;
 import com.lorelib.springcloud.movie.feign.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.annotation.Resource;
 
 /**
  * @author listening
@@ -14,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class FeignController {
-  @Autowired
+  @Resource
   private UserFeignClient userFeignClient;
 
   @GetMapping("feign/{id}")
