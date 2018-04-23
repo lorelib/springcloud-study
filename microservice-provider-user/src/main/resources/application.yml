@@ -14,7 +14,7 @@ spring:
     data: classpath:db/data.sql
 logging:
   level:
-    root: DEBUG
+    root: INFO
     org.hibernate: INFO
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
