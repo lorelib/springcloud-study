@@ -9,4 +9,4 @@ spring:
         git:
           uri: https://github.com/lorelib/springcloud-study.git
           search-paths: config-repo
-          default-label: Edgware.SR3
+          default-label: master
