@@ -1,0 +1,16 @@
+server:
+  port: 8040
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/lorelib/springcloud-study.git
+          search-paths: config-repo
+          default-label: Edgware.SR3
+logging:
+  level: debug
+  file: config-server.log
+  path: ./
