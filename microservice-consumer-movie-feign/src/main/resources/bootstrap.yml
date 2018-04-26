@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: microservice-consumer-movie-feign
+  cloud:
+    config:
+      uri: http://config-server:8040
+      profile: dev
+      label: Edgware.SR3
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
+  instance:
+    preferIpAddress: true
+ribbon:
+  eureka:
+    enabled: true
+feign:
+  hystrix:
+      enabled: true
