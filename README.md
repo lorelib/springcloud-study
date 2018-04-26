@@ -59,39 +59,26 @@
 > config-server
 
     访问：
-    http://localhost:8040/config-client-dev.properties
-    http://localhost:8040/config-client/dev
+    http://localhost:8040/Edgware.SR3/microservice-consumer-movie-feign-dev.properties
+    http://localhost:8040/microservice-consumer-movie-feign/dev/Edgware.SR3
     
-> config-client
+> feign-hystrix
 
     访问：
-    http://localhost:8031/hello
-    
-> config-server-eureka
-
-    访问：
-    http://localhost:8032/config-client-eureka-dev.properties
-    http://localhost:8032/config-client-eureka/dev
-    
-> config-client-eureka
-
-    http://localhost:8033/hello
+    http://localhost:8020/hello
+    修改config，然后刷新：curl  -X POST http://localhost:8041/refresh
     
 ## API GATEWAY
-1. 启动discovery-eureka
-2. 启动provider-user
-3. 启动api-gateway
 
+    之前通过http://localhost:8020/feign/1访问服务，
+    现在通过http://localhost:8050/microservice-consumer-movie-feign/feign/1即可访问相应服务
 
-    之前通过http://localhost:8000/user/1访问服务，
-    现在通过http://localhost:8040/provider-user/user/1即可访问相应服务
-
-    如果要修改访问路径为http://localhost:8040/test/user/1
+    如果要修改访问路径为http://localhost:8050/user/feign/1
     zuul:
       routes:
         user: # 可以随便写，在zuul上面唯一即可；当这里的值 = service-id时，service-id可以不写。
-          path: /test/**
-          service-id: provider-user
+          path: /user/**
+          service-id: microservice-consumer-movie-feign
           
     如果需要忽略某些服务，可以通过如下配置：
     zuul:
