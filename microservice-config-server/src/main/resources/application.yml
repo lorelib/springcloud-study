@@ -10,3 +10,11 @@ spring:
           uri: https://github.com/lorelib/springcloud-study.git
           search-paths: config-repo
           default-label: master
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery:8761/eureka
+logging:
+  level:
+    root: debug
+    org.springframework.cloud: debug
