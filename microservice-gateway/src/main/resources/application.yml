@@ -10,3 +10,8 @@ eureka:
   instance:
     preferIpAddress: true
     hostname: gateway
+zuul:
+  routes:
+    user:
+      path: /user/**
+      service-id: microservice-consumer-movie-feign
